@@ -1,7 +1,221 @@
-@import './base.css';
+:root {
+  --c-black: #181818;
+  --c-black-soft: #222222;
+  --c-black-mute: #282828;
+  --c-black-sheer: #0000004d;
 
-#app {
+  --c-white: #ffffff;
+  --c-white-soft: #f8f8f8;
+  --c-white-mute: #f2f2f2;
+  --c-white-sheer: #ffffff4d;
+
+  --c-text-white: var(--c-white);
+  --c-text-grey: var(--c-white-sheer);
+  --c-text-black: var(--c-black);
+
+  /* color pallet see https://coolors.co/palette/05668d-028090-00a896-02c39a-f0f3bd*/
+  /* primary/600 */
+  --c-venice-blue: #05668d;
+  /* primary/500 */
+  --c-blue-lagoon: #028090;
+  /* primary/400 */
+  --c-persian-green: #00a896;
+  /* primary/300 */
+  --c-caribbean-green: #02c39a;
+
+  --c-blue-600: #11279a;
+  --c-blue-500: #0d329f;
+  --c-blue-400: #114ab2;
+  --c-blue-300: #135ec5;
+
+  --c-green-600: #00a33d;
+  --c-green-500: #00b41f;
+  --c-green-400: #1dd700;
+  --c-green-300: #40e602;
+
+  --c-sand: #f0f3bd;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--c-black);
+  --color-background-soft: var(--c-black-soft);
+  --color-background-mute: var(--c-black-mute);
+
+  --color-heading: var(--c-text-white);
+  --color-text: var(--c-text-grey);
+  --color-link: var(--c-text-white);
+
+  --color-button-primary-bg: var(--c-venice-blue);
+  --color-button-primary-text: var(--c-white);
+
+  --color-border: var(--c-white-sheer);
+  --color-shadow: var(--c-black-sheer);
+  --gradient-transparent: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  --color-sheer-legibility: #181818aa;
+  --gradient-primary-accent: linear-gradient(
+    150deg,
+    var(--c-caribbean-green) 0%,
+    var(--c-blue-300) 100%
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  /* transition: color 0.5s, background-color 0.5s; */
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.heading--xxl {
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+.heading--xl {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.heading--l {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.heading--m {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.heading--s {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.heading--xs {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.heading--xxs {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.body--xl {
+  font-size: 1.25rem;
+}
+.body--l {
+  font-size: 1.125rem;
+}
+/* body--m is the default, it is often omitted */
+.body--m {
+  font-size: 1rem;
+}
+.body--s {
+  font-size: 0.875rem;
+}
+.body--xs {
+  font-size: 0.75rem;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Links */
+
+a {
+  text-decoration: underline;
+  color: var(--color-link);
+  transition: 0.4s;
+  display: flex;
+}
+
+@media (hover: hover) {
+  a:hover:not(.prevent-default-hover) {
+    color: var(--c-caribbean-green);
+  }
+}
+
+/* svg for icons in the project */
+
+svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* container for responsiveness*/
+
+.container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
+/* Transparent cards are used a lot in this project, look up glassmorphism */
+
+.transparent-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: var(--gradient-transparent);
+  border: 2px solid var(--color-border);
+  box-shadow: 0px 4px 4px var(--color-shadow);
+  backdrop-filter: blur(2px);
+
+  padding: 1rem;
+  gap: 0.5rem;
+  border-radius: 1rem;
+}
+
+.tarnsparent-card--large {
+  padding: 4rem;
+  gap: 1rem;
+  border-radius: 2rem;
+}
