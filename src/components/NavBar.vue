@@ -4,21 +4,23 @@ import IconGithub from "@/components/icons/IconGithub.vue";
 import IconLinkedin from "@/components/icons/IconLinkedin.vue";
 </script>
 <template>
-  <nav class="nav container">
-    <RouterLink
-      to="/"
-      class="prevent-default-hover"
-      aria-label="Go back to the homepage by clicking the logo"
-    >
-      <img class="logo" src="/logo2.svg" alt="logo" />
-    </RouterLink>
-    <div class="icon-container">
-      <a href="" target="_blank">
-        <IconLinkedin />
-      </a>
-      <a href="" target="_blank">
-        <IconGithub />
-      </a>
+  <nav class="nav">
+    <div class="nav__container container">
+      <RouterLink
+        to="/"
+        class="prevent-default-hover"
+        aria-label="Go back to the homepage by clicking the logo"
+      >
+        <img class="logo" src="/logo2.svg" alt="logo" />
+      </RouterLink>
+      <div class="icon-container">
+        <a href="" target="_blank">
+          <IconLinkedin />
+        </a>
+        <a href="" target="_blank">
+          <IconGithub />
+        </a>
+      </div>
     </div>
   </nav>
 </template>
@@ -31,7 +33,9 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
   right: 0;
   z-index: 100;
   background: transparent;
+}
 
+.nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;

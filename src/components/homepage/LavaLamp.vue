@@ -18,18 +18,27 @@ type Bounds = {
   maxY: number;
 };
 
-const circles = ref<Circle[]>([]);
+const windowResizeCounter = ref(0);
 
+const circles = ref<Circle[]>([]);
 const bounds = computed<Bounds>(() => {
   let maxX = 450;
   let maxY = 800;
+  let minX = -150;
+
+  windowResizeCounter.value;
 
   if (lavaLampElement.value) {
     maxX = lavaLampElement.value.clientWidth + 100;
     maxY = lavaLampElement.value.clientHeight + 100;
+
+    if (lavaLampElement.value.clientWidth >= 768) {
+      minX = Math.floor(lavaLampElement.value.clientWidth / 2) - 150;
+    }
   }
+
   return {
-    minX: -150,
+    minX,
     minY: -150,
     maxX,
     maxY,
@@ -45,7 +54,7 @@ const updateCirclePosition = (c: Circle) => {
     radius: c.radius,
   };
   if (circle.x < bounds.value.minX) {
-    circle.x = bounds.value.minX + Math.random() * 10;
+    circle.x = bounds.value.minX + Math.random();
     circle.xSpeed = Math.abs(circle.xSpeed);
   } else if (circle.x > bounds.value.maxX) {
     circle.x = bounds.value.maxX - Math.random() * 10;
@@ -63,6 +72,10 @@ const updateCirclePosition = (c: Circle) => {
 
 let interval: number | null = null;
 const lavaLampElement = ref<SVGElement | null>(null);
+
+const onWindowResize = () => {
+  windowResizeCounter.value += 1;
+};
 
 onMounted(() => {
   const defaultCircles = [
@@ -104,12 +117,14 @@ onMounted(() => {
   } catch (e) {
     circles.value = defaultCircles;
   }
+  window.addEventListener("resize", onWindowResize);
   interval = setInterval(() => {
     circles.value = circles.value.map((circle) => updateCirclePosition(circle));
   }, 10);
 });
 
 onUnmounted(() => {
+  window.removeEventListener("resize", onWindowResize);
   if (interval) clearInterval(interval);
 });
 </script>

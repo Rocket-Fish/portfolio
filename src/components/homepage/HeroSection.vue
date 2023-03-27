@@ -17,6 +17,7 @@ import LavaLamp from "./LavaLamp.vue";
         <p class="body body-m semi-bold hero-description">
           I build intuitive, secure, and performant web applications.
         </p>
+        <a href="#" class="button learn-more">Learn more</a>
       </div>
     </div>
   </section>
@@ -30,7 +31,7 @@ import LavaLamp from "./LavaLamp.vue";
 }
 
 .hero-heading {
-  background: var(--gradient-primary-accent);
+  background: var(--gradient-primary-accent-300);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -58,5 +59,9 @@ import LavaLamp from "./LavaLamp.vue";
 
 .hero-card {
   background-color: var(--color-sheer-legibility);
+}
+
+.learn-more {
+  margin-top: 1rem;
 }
 </style>

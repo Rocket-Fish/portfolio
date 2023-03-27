@@ -57,7 +57,22 @@
     rgba(255, 255, 255, 0.03) 100%
   );
   --color-sheer-legibility: #181818aa;
-  --gradient-primary-accent: linear-gradient(
+  --gradient-primary-accent-600: linear-gradient(
+    150deg,
+    var(--c-venice-blue) 0%,
+    var(--c-blue-600) 100%
+  );
+  --gradient-primary-accent-500: linear-gradient(
+    150deg,
+    var(--c-blue-lagoon) 0%,
+    var(--c-blue-500) 100%
+  );
+  --gradient-primary-accent-400: linear-gradient(
+    150deg,
+    var(--c-persian-green) 0%,
+    var(--c-blue-400) 100%
+  );
+  --gradient-primary-accent-300: linear-gradient(
     150deg,
     var(--c-caribbean-green) 0%,
     var(--c-blue-300) 100%
@@ -106,6 +121,13 @@ h6,
 .heading--xxl {
   font-size: 3.5rem;
   line-height: 1.2;
+}
+
+@media (min-width: 375) {
+  .heading--xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
 }
 
 .heading--xl {
@@ -184,7 +206,7 @@ a {
 
 /* svg for icons in the project */
 
-svg {
+svg.icon {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -213,9 +235,63 @@ svg {
   gap: 0.5rem;
   border-radius: 1rem;
 }
+@media (min-width: 768px) {
+  .tarnsparent-card--large {
+    padding: 4rem;
+    gap: 1rem;
+    border-radius: 2rem;
+  }
+}
 
-.tarnsparent-card--large {
-  padding: 4rem;
-  gap: 1rem;
-  border-radius: 2rem;
+/* Buttons */
+.button {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+
+  background: var(--c-venice-blue);
+  color: var(--c-text-white);
+  border: 2px solid var(--c-white-sheer);
+  border-radius: 100px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 1rem;
+
+  z-index: 1;
+
+  transition: background-color 0.4s ease-out;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary-accent-600);
+  z-index: -1;
+  transition: opacity 0.4s ease-out;
+  opacity: 0;
+  border-radius: 100px;
+}
+
+@media (hover: hover) {
+  .button:hover:not(:active)::before,
+  .button:focus:not(:active)::before {
+    opacity: 1;
+  }
+  a.button:hover {
+    color: var(--c-text-white);
+  }
+}
+
+.button:active {
+  background: var(--c-blue-600);
 }
