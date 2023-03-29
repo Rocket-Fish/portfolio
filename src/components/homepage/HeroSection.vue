@@ -18,7 +18,7 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
             Software Engineer<br />& More
           </h1>
           <p class="body body-m semi-bold hero-description">
-            I build intuitive, secure, and performant web applications.
+            I build intuitive, secure, and performant web apps.
           </p>
           <div class="hero-card__cta">
             <a href="#what-i-bring" class="button">Learn more</a>

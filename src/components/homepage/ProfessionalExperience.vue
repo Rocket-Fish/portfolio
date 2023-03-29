@@ -102,7 +102,7 @@ const personalProjects = ref<Card[]>([
   },
   {
     title: "Robotics Programmer",
-    subtitle: "@ FRC Team 1246",
+    subtitle: "@FRC Team 1246",
     description:
       "Back in 2017, I wrote some code for my highschool robotics team. Looking back many things could be done better, including but not limited to using better sensors and more automation for complex mechanisms to reduce the burden on the pilot.",
   },
@@ -117,8 +117,8 @@ const personalProjects = ref<Card[]>([
     <article class="work-experience">
       <header>
         <h3 class="heading--m">
-          Frontend Engineer @
-          <a href="https://loginid.io" target="_blank">LoginID</a>
+          Frontend Engineer
+          <a href="https://loginid.io" target="_blank">@LoginID</a>
         </h3>
         <h4 class="heading--xss">March 2020 - Present</h4>
         <p class="body--m">
