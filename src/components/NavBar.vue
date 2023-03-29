@@ -14,10 +14,13 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
         <img class="logo" src="/logo2.svg" alt="logo" />
       </RouterLink>
       <div class="icon-container">
-        <a href="" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/jimmy-z-096b031b2/"
+          target="_blank"
+        >
           <IconLinkedin />
         </a>
-        <a href="" target="_blank">
+        <a href="https://github.com/rocket-fish" target="_blank">
           <IconGithub />
         </a>
       </div>
@@ -32,7 +35,11 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
   left: 0;
   right: 0;
   z-index: 100;
-  background: transparent;
+  background: linear-gradient(
+    180deg,
+    var(--color-background) 0%,
+    transparent 100%
+  );
 }
 
 .nav__container {

@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import HomepageSection from "@/components/HomepageSection.vue";
+import WhatIBring from "@/components/homepage/WhatIBring.vue";
 import HeroSection from "@/components/homepage/HeroSection.vue";
+import ProfessionalExperience from "@/components/homepage/ProfessionalExperience.vue";
+import ContactMe from "@/components/homepage/ContactMe.vue";
 </script>
 <template>
   <main class="main">
     <HeroSection></HeroSection>
-    <!-- <HomepageSection v-for="i in [1, 2, 3, 4, 5]" :key="i">
-      <template #header>Some section {{ i }}</template>
-      <template #default>
-        <a href="#">link</a>
-      </template>
-    </HomepageSection> -->
+    <WhatIBring />
+    <ProfessionalExperience />
+    <ContactMe />
   </main>
 </template>
 <style scoped>

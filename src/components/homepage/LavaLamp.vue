@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // gotta give credit where credit is due
 // this component has been adapted from this person's code pen https://codepen.io/mosfetti/pen/JjaYaVy
-import { ref, reactive, onMounted, onUnmounted, computed } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
 type Circle = {
   x: number;
@@ -74,6 +74,7 @@ let interval: number | null = null;
 const lavaLampElement = ref<SVGElement | null>(null);
 
 const onWindowResize = () => {
+  // this here exists to force vue to recompute the bounding box of the thing
   windowResizeCounter.value += 1;
 };
 

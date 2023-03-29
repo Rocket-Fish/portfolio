@@ -1,0 +1,77 @@
+<script setup lang="ts">
+import TestimonialGrid from "./TestimonialGrid.vue";
+import type { Testimonial } from "./TestimonialGrid.vue";
+import { ref } from "vue";
+const testimonials = ref<Testimonial[]>([
+  {
+    name: "Name",
+    role: "Current Role",
+    description:
+      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    linkedInUrl: "#",
+  },
+  {
+    name: "Name",
+    role: "Current Role",
+    description:
+      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    linkedInUrl: "#",
+  },
+  {
+    name: "Name",
+    role: "Current Role",
+    description:
+      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    linkedInUrl: "#",
+  },
+]);
+</script>
+<template>
+  <section class="section container contact-me">
+    <div class="left">
+      <h3 class="heading--xs">
+        I am currently open to contribute to interesting projects.
+      </h3>
+      <h2 class="heading--xxl">Don't Delay, <br />Connect Today</h2>
+      <a
+        class="button"
+        target="_blank"
+        href="https://www.linkedin.com/in/jimmy-z-096b031b2/"
+        >Connect & Chat on LinkedIn →</a
+      >
+    </div>
+    <div class="right">
+      <TestimonialGrid :testimonials="testimonials" />
+    </div>
+  </section>
+</template>
+<style scoped>
+.contact-me {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 3rem;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 1rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .right {
+    max-width: 600px;
+  }
+}
+</style>

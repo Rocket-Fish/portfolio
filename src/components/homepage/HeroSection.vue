@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import LavaLamp from "./LavaLamp.vue";
+import IconGithub from "@/components/icons/IconGithub.vue";
+import IconLinkedin from "@/components/icons/IconLinkedin.vue";
 </script>
 <template>
   <section class="hero">
@@ -7,7 +9,7 @@ import LavaLamp from "./LavaLamp.vue";
       <LavaLamp />
     </div>
     <div class="hero__layout container">
-      <div class="hero-card transparent-card tarnsparent-card--large">
+      <div class="hero-card card card--large card--transparent">
         <p class="body body-m semi-bold hero-description">
           Hi, I'm Jimmy, I am a
         </p>
@@ -17,7 +19,20 @@ import LavaLamp from "./LavaLamp.vue";
         <p class="body body-m semi-bold hero-description">
           I build intuitive, secure, and performant web applications.
         </p>
-        <a href="#" class="button learn-more">Learn more</a>
+        <div class="hero-card__cta">
+          <a href="#what-i-bring" class="button">Learn more</a>
+          <!-- <div class="hero-card__icon-container">
+            <a
+              href="https://www.linkedin.com/in/jimmy-z-096b031b2/"
+              target="_blank"
+            >
+              <IconLinkedin />
+            </a>
+            <a href="https://github.com/rocket-fish" target="_blank">
+              <IconGithub />
+            </a>
+          </div> -->
+        </div>
       </div>
     </div>
   </section>
@@ -55,13 +70,29 @@ import LavaLamp from "./LavaLamp.vue";
   bottom: 0;
   right: -2rem;
   left: -2rem;
+
+  background: linear-gradient(
+    0deg,
+    var(--color-background) 0%,
+    transparent 10%
+  );
 }
 
 .hero-card {
   background-color: var(--color-sheer-legibility);
 }
 
-.learn-more {
+.hero-card__cta {
   margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.hero-card__icon-container {
+  display: flex;
+  gap: 1rem;
 }
 </style>
