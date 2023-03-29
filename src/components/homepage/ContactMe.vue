@@ -7,21 +7,21 @@ const testimonials = ref<Testimonial[]>([
     name: "Name",
     role: "Current Role",
     description:
-      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     linkedInUrl: "#",
   },
   {
     name: "Name",
     role: "Current Role",
     description:
-      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     linkedInUrl: "#",
   },
   {
     name: "Name",
     role: "Current Role",
     description:
-      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     linkedInUrl: "#",
   },
 ]);
@@ -30,7 +30,7 @@ const testimonials = ref<Testimonial[]>([
   <section class="section container contact-me">
     <div class="left">
       <h3 class="heading--xs">
-        I am currently open to contribute to interesting projects.
+        I am currently looking to contribute to interesting projects.
       </h3>
       <h2 class="heading--xxl">Don't Delay, <br />Connect Today</h2>
       <a

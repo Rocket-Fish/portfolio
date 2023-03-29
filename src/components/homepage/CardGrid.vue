@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import type { Component } from "vue";
+
 export type Card = {
   title: string;
   subtitle: string;
   description: string;
   isPrimary?: boolean;
+  asideComponent?: Component;
+  button?: {
+    label: string;
+    to: string;
+  };
 };
 
 defineProps({
@@ -18,9 +25,18 @@ defineProps({
       :key="card.title"
       :class="{ 'card-grid__primary': card.isPrimary }"
     >
-      <h3 class="heading--s">{{ card.title }}</h3>
-      <h4 class="body-m semi-bold">{{ card.subtitle }}</h4>
-      <p class="body-m card-grid__description">{{ card.description }}</p>
+      <div class="card-container">
+        <h3 class="heading--s">{{ card.title }}</h3>
+        <h4 class="body-m semi-bold">{{ card.subtitle }}</h4>
+        <p class="body-m card-grid__description">{{ card.description }}</p>
+        <a
+          class="button button--secondary"
+          v-if="card.button"
+          :href="card.button.to"
+          target="_blank"
+          >{{ card.button.label }}</a
+        >
+      </div>
     </div>
   </div>
 </template>

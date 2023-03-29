@@ -8,7 +8,7 @@ const cards = ref<Card[]>([
     title: "Frontend Development",
     subtitle: "Vue, React, Web Components",
     description:
-      "Turn designs into efficient, compliant, secure, and maintainable production grade code with test cases.",
+      "Turn designs into efficient, compliant, secure, and maintainable code. Experienced in creating complex dashboard and passwordless authentication experiences.",
     isPrimary: true,
   },
   {

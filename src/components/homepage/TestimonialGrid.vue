@@ -13,11 +13,13 @@ defineProps({
 <template>
   <div class="card-grid">
     <div class="card" v-for="card in testimonials" :key="card.name">
-      <p class="body-m">{{ card.description }}</p>
-      <h3 class="heading--xs">
-        {{ card.name }}
-      </h3>
-      <h4 class="heading--xss normal">{{ card.role }}</h4>
+      <div class="card-container">
+        <p class="body-m">{{ card.description }}</p>
+        <h3 class="heading--xs">
+          {{ card.name }}
+        </h3>
+        <h4 class="heading--xss normal">{{ card.role }}</h4>
+      </div>
     </div>
   </div>
 </template>

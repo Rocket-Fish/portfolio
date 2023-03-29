@@ -10,18 +10,19 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
     </div>
     <div class="hero__layout container">
       <div class="hero-card card card--large card--transparent">
-        <p class="body body-m semi-bold hero-description">
-          Hi, I'm Jimmy, I am a
-        </p>
-        <h1 class="hero-heading heading heading--xxl">
-          Software Engineer<br />& More
-        </h1>
-        <p class="body body-m semi-bold hero-description">
-          I build intuitive, secure, and performant web applications.
-        </p>
-        <div class="hero-card__cta">
-          <a href="#what-i-bring" class="button">Learn more</a>
-          <!-- <div class="hero-card__icon-container">
+        <div class="card-container">
+          <p class="body body-m semi-bold hero-description">
+            Hi, I'm Jimmy, I am a
+          </p>
+          <h1 class="hero-heading heading heading--xxl">
+            Software Engineer<br />& More
+          </h1>
+          <p class="body body-m semi-bold hero-description">
+            I build intuitive, secure, and performant web applications.
+          </p>
+          <div class="hero-card__cta">
+            <a href="#what-i-bring" class="button">Learn more</a>
+            <!-- <div class="hero-card__icon-container">
             <a
               href="https://www.linkedin.com/in/jimmy-z-096b031b2/"
               target="_blank"
@@ -32,6 +33,7 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
               <IconGithub />
             </a>
           </div> -->
+          </div>
         </div>
       </div>
     </div>
