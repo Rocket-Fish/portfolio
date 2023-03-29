@@ -27,10 +27,10 @@ const cards = ref<Card[]>([
     title: "Product Deployment",
     subtitle: "Docker, Heroku, Gitlab CI/CD",
     description:
-      "Adapt the product to build and deployment requirements whether its containerization or CI/CD pipelines.",
+      "Adapt the product to build and deployment requirements whether it's containerization or CI/CD pipelines.",
   },
   {
-    title: "Security Mindset",
+    title: "Focus on Security",
     subtitle: "Try to break things",
     description:
       "How can I exploit what I'm building? Where are its attack surfaces? What strategies can I incorporate to prevent and mitigate damage.",

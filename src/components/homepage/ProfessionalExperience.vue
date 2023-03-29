@@ -8,7 +8,7 @@ const loginIDProjects = ref<Card[]>([
     title: "Core Passwordless Authentication and Identity Product",
     subtitle: "Vue, Lit(Web Components), Typescript, Golang, Postgres, Docker",
     description:
-      "Design, develop, and unit test for all three user interfaces in this product: an administrator dashboard, an OIDC authentication experience, and a dashboard for the end user. Collaborate with product managers, backend developers, and our chief architect on features and bug fixes.",
+      "Design, develop, and test FIDO2 based passwordless authentication experiences and identity verification solutions for all three user interfaces in this product: an administrator dashboard, an OIDC authentication experience, and a dashboard for the end user. Collaborate with team members on features, updates, and fixes.",
     isPrimary: true,
     button: {
       label: "Learn more",
@@ -101,7 +101,7 @@ const personalProjects = ref<Card[]>([
     },
   },
   {
-    title: "Robotics Programmer",
+    title: "Robotics Programing",
     subtitle: "@FRC Team 1246",
     description:
       "Back in 2017, I wrote some code for my highschool robotics team. Looking back many things could be done better, including but not limited to using better sensors and more automation for complex mechanisms to reduce the burden on the pilot.",
@@ -155,9 +155,8 @@ const personalProjects = ref<Card[]>([
     </article>
     <article class="work-experience">
       <header>
-        <h3 class="heading--m">Programming Enthusiast</h3>
+        <h3 class="heading--m">Personal Projects</h3>
         <h4 class="heading--xss">2014 - Present</h4>
-        <p class="body--m">Some personal projectsI had done over the years</p>
       </header>
       <CardGrid :cards="personalProjects" />
     </article>
