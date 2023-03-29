@@ -119,14 +119,14 @@ onMounted(() => {
     circles.value = defaultCircles;
   }
   window.addEventListener("resize", onWindowResize);
-  interval = setInterval(() => {
+  interval = window.setInterval(() => {
     circles.value = circles.value.map((circle) => updateCirclePosition(circle));
   }, 10);
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", onWindowResize);
-  if (interval) clearInterval(interval);
+  if (interval) window.clearInterval(interval);
 });
 </script>
 <template>
