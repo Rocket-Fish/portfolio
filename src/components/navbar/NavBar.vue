@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import IconGithub from "@/components/icons/IconGithub.vue";
 import IconLinkedin from "@/components/icons/IconLinkedin.vue";
+import AnimatedLink from "./AnimatedLink.vue";
 </script>
 <template>
   <nav class="nav">
@@ -14,15 +15,15 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
         <img class="logo" src="/logo2.svg" alt="logo" />
       </RouterLink>
       <div class="icon-container">
-        <a
-          href="https://www.linkedin.com/in/jimmy-z-096b031b2/"
-          target="_blank"
+        <AnimatedLink
+          to="https://www.linkedin.com/in/jimmy-z-096b031b2/"
+          description="LinkedIn"
         >
           <IconLinkedin />
-        </a>
-        <a href="https://github.com/rocket-fish" target="_blank">
+        </AnimatedLink>
+        <AnimatedLink to="https://github.com/rocket-fish" description="Github">
           <IconGithub />
-        </a>
+        </AnimatedLink>
       </div>
     </div>
   </nav>
@@ -40,6 +41,7 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
     var(--color-background) 0%,
     transparent 100%
   );
+  transition: 0.4s ease-in-out;
 }
 
 .nav__container {
@@ -56,5 +58,10 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
 .nav .icon-container {
   display: flex;
   gap: 1rem;
+  justify-content: end;
+}
+
+html:not([data-scroll="0"]) .nav {
+  background: var(--color-background);
 }
 </style>
