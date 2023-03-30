@@ -44,6 +44,12 @@ import AnimatedLink from "./AnimatedLink.vue";
   transition: 0.4s ease-in-out;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .nav {
+    transition: 0s;
+  }
+}
+
 .nav__container {
   display: flex;
   justify-content: space-between;

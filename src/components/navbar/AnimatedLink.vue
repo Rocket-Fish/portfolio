@@ -41,4 +41,11 @@ html:not([data-scroll="0"]) .moveable-text {
 html:not([data-scroll="0"]) .animated-link {
   width: 1.5rem;
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .animated-link,
+  .moveable-text {
+    transition: 0s;
+  }
+}
 </style>
