@@ -1,7 +1,12 @@
 <script setup lang="ts">
 // gotta give credit where credit is due
 // this component has been adapted from this person's code pen https://codepen.io/mosfetti/pen/JjaYaVy
-import { ref, onMounted, onUnmounted, computed } from "vue";
+import { ref, onMounted, onUnmounted, computed, watch } from "vue";
+
+type Props = {
+  disable: Boolean;
+};
+const props = defineProps<Props>();
 
 type Circle = {
   x: number;
@@ -92,7 +97,9 @@ onMounted(() => {
       // spawn number of circles proportional to width, concentrate them towards 60% to the right side of the screen
       const elementWidth = lavaLampElement.value.clientWidth;
       const elementHeight = lavaLampElement.value.clientHeight;
-      const numberOfCircles = Math.ceil(elementWidth / 200);
+      let numberOfCircles = Math.ceil(elementWidth / 200);
+      if (numberOfCircles > 7) numberOfCircles = 7;
+      if (numberOfCircles < 2) numberOfCircles = 2;
 
       const getRandom = (min: number, max: number) => {
         return Math.random() * (max - min) + min;
@@ -119,14 +126,37 @@ onMounted(() => {
     circles.value = defaultCircles;
   }
   window.addEventListener("resize", onWindowResize);
+  if (!props.disable && !interval) {
+    startAnimation();
+  }
+});
+
+const startAnimation = () => {
   interval = window.setInterval(() => {
     circles.value = circles.value.map((circle) => updateCirclePosition(circle));
-  }, 10);
+  }, 20);
+};
+
+const stopAnimation = () => {
+  if (interval) {
+    window.clearInterval(interval);
+    interval = null;
+  }
+};
+
+watch<Props>(props, (newValue: Props) => {
+  console.log("here");
+  if (!newValue.disable && !interval) {
+    startAnimation();
+  }
+  if (newValue.disable && interval) {
+    stopAnimation();
+  }
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", onWindowResize);
-  if (interval) window.clearInterval(interval);
+  stopAnimation();
 });
 </script>
 <template>

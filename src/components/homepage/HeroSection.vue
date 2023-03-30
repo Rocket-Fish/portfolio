@@ -1,12 +1,20 @@
 <script setup lang="ts">
 import LavaLamp from "./LavaLamp.vue";
-import IconGithub from "@/components/icons/IconGithub.vue";
-import IconLinkedin from "@/components/icons/IconLinkedin.vue";
+import { ref, onMounted } from "vue";
+
+const disableLavalamp = ref(false);
+
+onMounted(() => {
+  const isReducedMotion =
+    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+
+  disableLavalamp.value = isReducedMotion;
+});
 </script>
 <template>
   <section class="hero">
     <div class="hero__background">
-      <LavaLamp />
+      <LavaLamp :disable="disableLavalamp" />
     </div>
     <div class="hero__layout container">
       <div class="hero-card card card--large card--transparent">
@@ -22,17 +30,12 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
           </p>
           <div class="hero-card__cta">
             <a href="#what-i-bring" class="button">Learn more</a>
-            <!-- <div class="hero-card__icon-container">
             <a
-              href="https://www.linkedin.com/in/jimmy-z-096b031b2/"
-              target="_blank"
+              href="#"
+              class="button button--secondary"
+              @click.prevent="disableLavalamp = !disableLavalamp"
+              >{{ disableLavalamp ? "Enable" : "Disable" }} Lavalamp</a
             >
-              <IconLinkedin />
-            </a>
-            <a href="https://github.com/rocket-fish" target="_blank">
-              <IconGithub />
-            </a>
-          </div> -->
           </div>
         </div>
       </div>
@@ -87,8 +90,9 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
 .hero-card__cta {
   margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+  gap: 1rem;
 
   width: 100%;
 }

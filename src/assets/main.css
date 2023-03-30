@@ -370,8 +370,7 @@ svg.icon {
 }
 
 @media (hover: hover) {
-  .button:hover:not(:active)::before,
-  .button:focus:not(:active)::before {
+  .button:hover:not(:active)::before {
     opacity: 1;
   }
   a.button:hover {
