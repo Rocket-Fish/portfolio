@@ -30,7 +30,7 @@ import AnimatedLink from "./AnimatedLink.vue";
 </template>
 <style scoped>
 .nav {
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   position: fixed;
   top: 0;
   left: 0;

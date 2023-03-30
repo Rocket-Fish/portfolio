@@ -20,7 +20,7 @@ defineProps({
 <template>
   <div class="card-grid">
     <div
-      class="card"
+      class="card card--with-bg"
       v-for="card in cards"
       :key="card.title"
       :class="{ 'card-grid__primary': card.isPrimary }"

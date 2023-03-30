@@ -41,7 +41,7 @@ const testimonials = ref<Testimonial[]>([
       >
     </div>
     <div class="right">
-      <!-- <TestimonialGrid :testimonials="testimonials" /> -->
+      <TestimonialGrid :testimonials="testimonials" />
     </div>
   </section>
 </template>
