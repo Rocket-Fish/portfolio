@@ -109,60 +109,66 @@ const personalProjects = ref<Card[]>([
 ]);
 </script>
 <template>
-  <section class="section container">
-    <h2 class="heading--l">Professional & Personal Experience</h2>
-    <p>
-      Three years of professional experience; Ten years of coding and counting.
-    </p>
-    <article class="work-experience">
-      <header>
-        <h3 class="heading--m">
-          Frontend Engineer
-          <a href="https://loginid.io" target="_blank">@LoginID</a>
-        </h3>
-        <h4 class="heading--xss">March 2020 - Present</h4>
-        <p class="body--m">
-          Architect, design, develop, test, and maintain frontend interfaces
-          across various products.
-          <br />
-          Coordinate with other engineering team members on implementation,
-          architecture, and deployment. As well as perform reviews of other team
-          member's code
-          <br />
-          Collaborate with various executives, product managers, and other
-          stakeholders to develop and refine user experiences.
-          <br />
-          LoginID was built around the following core technologies:
-          <a
-            href="https://auth0.com/intro-to-iam/what-is-openid-connect-oidc"
-            target="_blank"
-            >OIDC</a
-          >,
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API"
-            target="_blank"
-            >Webauthn API</a
-          >,
-          <a href="https://fidoalliance.org/fido2/" target="_blank">FIDO2</a>,
-          <a
-            href="https://en.wikipedia.org/wiki/Public_key_infrastructure"
-            target="_blank"
-            >PKI</a
-          >
-        </p>
-      </header>
-      <CardGrid :cards="loginIDProjects" />
-    </article>
-    <article class="work-experience">
-      <header>
-        <h3 class="heading--m">Personal Projects</h3>
-        <h4 class="heading--xss">2014 - Present</h4>
-      </header>
-      <CardGrid :cards="personalProjects" />
-    </article>
-  </section>
+  <div class="professional-experience">
+    <section class="section container">
+      <h2 class="heading--l">Professional & Personal Experience</h2>
+      <p class="body--m">
+        Three years of professional experience; Ten years of coding and
+        counting.
+      </p>
+      <article class="work-experience">
+        <header>
+          <h3 class="heading--m">
+            Frontend Engineer
+            <a href="https://loginid.io" target="_blank">@LoginID</a>
+          </h3>
+          <h4 class="heading--xss">March 2020 - Present</h4>
+          <p class="body--m">
+            Architect, design, develop, test, and maintain frontend interfaces
+            across various products.
+            <br />
+            Coordinate with other engineering team members on implementation,
+            architecture, and deployment. As well as perform reviews of other
+            team member's code
+            <br />
+            Collaborate with various executives, product managers, and other
+            stakeholders to develop and refine user experiences.
+            <br />
+            LoginID was built around the following core technologies:
+            <a
+              href="https://auth0.com/intro-to-iam/what-is-openid-connect-oidc"
+              target="_blank"
+              >OIDC</a
+            >,
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API"
+              target="_blank"
+              >Webauthn API</a
+            >,
+            <a href="https://fidoalliance.org/fido2/" target="_blank">FIDO2</a>,
+            <a
+              href="https://en.wikipedia.org/wiki/Public_key_infrastructure"
+              target="_blank"
+              >PKI</a
+            >
+          </p>
+        </header>
+        <CardGrid :cards="loginIDProjects" />
+      </article>
+      <article class="work-experience">
+        <header>
+          <h3 class="heading--m">Personal Projects</h3>
+          <h4 class="heading--xss">2014 - Present</h4>
+        </header>
+        <CardGrid :cards="personalProjects" />
+      </article>
+    </section>
+  </div>
 </template>
 <style scoped>
+.professional-experience {
+  background-color: var(--c-primary-800);
+}
 .work-experience {
   width: 100%;
 

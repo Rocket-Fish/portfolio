@@ -70,8 +70,8 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -2rem;
-  left: -2rem;
+  right: 0;
+  left: 0;
 
   background: linear-gradient(
     0deg,
