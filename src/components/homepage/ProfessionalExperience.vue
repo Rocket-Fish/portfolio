@@ -100,12 +100,6 @@ const personalProjects = ref<Card[]>([
       to: "https://github.com/Rocket-Fish/Endless-Nights",
     },
   },
-  {
-    title: "Robotics Programing",
-    subtitle: "@FRC Team 1246",
-    description:
-      "Back in 2017, I wrote some code for my highschool robotics team. Looking back many things could be done better, including but not limited to using better sensors and more automation for complex mechanisms to reduce the burden on the pilot.",
-  },
 ]);
 </script>
 <template>

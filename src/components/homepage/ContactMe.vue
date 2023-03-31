@@ -3,26 +3,35 @@ import TestimonialGrid from "./TestimonialGrid.vue";
 import type { Testimonial } from "./TestimonialGrid.vue";
 import { ref } from "vue";
 const testimonials = ref<Testimonial[]>([
+  // {
+  //   name: "Name",
+  //   role: "Current Role",
+  //   description:
+  //     "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+  //   linkedInUrl: "#",
+  // },
+  // {
+  //   name: "Name",
+  //   role: "Current Role",
+  //   description:
+  //     "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+  //   linkedInUrl: "#",
+  // },
+  // {
+  //   name: "Name",
+  //   role: "Current Role",
+  //   description:
+  //     "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+  //   linkedInUrl: "#",
+  //   primary: true,
+  // },
   {
-    name: "Name",
-    role: "Current Role",
+    name: "Jaclyn Ling",
+    role: "CEO @Hatchways",
     description:
-      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      "I met Jimmy at the beginning of his career when he was looking for his first software position. What struck me was how motivated and hardworking he was. He is the type of person who will put 110% in. Over the years, I've seen him grow a stronger product sense with an interest in design and user experience. Any team would be lucky to have Jimmy on the team!",
     linkedInUrl: "#",
-  },
-  {
-    name: "Name",
-    role: "Current Role",
-    description:
-      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    linkedInUrl: "#",
-  },
-  {
-    name: "Name",
-    role: "Current Role",
-    description:
-      "Say something nice; Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    linkedInUrl: "#",
+    primary: true,
   },
 ]);
 </script>
@@ -41,7 +50,7 @@ const testimonials = ref<Testimonial[]>([
       >
     </div>
     <div class="right">
-      <!-- <TestimonialGrid :testimonials="testimonials" /> -->
+      <TestimonialGrid :testimonials="testimonials" />
     </div>
   </section>
 </template>
