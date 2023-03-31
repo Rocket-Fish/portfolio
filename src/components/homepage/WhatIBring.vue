@@ -43,3 +43,8 @@ const cards = ref<Card[]>([
     <CardGrid :cards="cards" />
   </section>
 </template>
+<style scoped>
+#what-i-bring {
+  padding-top: 8rem;
+}
+</style>
