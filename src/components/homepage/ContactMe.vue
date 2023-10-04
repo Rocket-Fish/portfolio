@@ -19,7 +19,7 @@ const testimonials = ref<Testimonial[]>([
   // },
   {
     name: "Behroz Sabet",
-    role: "Directory of Product @LoginID",
+    role: "Director of Product @LoginID",
     description:
       "Jimmy is a wonderfully talented, and creative Engineer who can impact the team quickly and massively. His articulation is clear and concise and he raises the team with his positive energy and drive. The quality of Jimmy's code is top class and the speed he develops is unparalleled. He is nothing short of phenomenal. ",
     linkedInUrl: "#",

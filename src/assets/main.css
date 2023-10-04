@@ -294,6 +294,7 @@ svg.icon {
 
 /* Card border hover effect */
 
+/* unfortunately this over bar effect doesn't work imo
 .card:before,
 .card:after {
   background: linear-gradient(
@@ -324,7 +325,7 @@ svg.icon {
     top: 25%;
     opacity: 1;
   }
-}
+} */
 
 /* Buttons */
 .button {
