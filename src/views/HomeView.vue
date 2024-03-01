@@ -8,9 +8,9 @@ import WaveSpacer from "@/components/homepage/WaveSpacer.vue";
 <template>
   <main class="main">
     <HeroSection></HeroSection>
-    <WhatIBring />
     <WaveSpacer />
-    <ProfessionalExperience />
+    <WhatIBring />
+    <!-- <ProfessionalExperience /> -->
     <WaveSpacer :inverted="true" />
     <ContactMe />
   </main>
