@@ -38,12 +38,17 @@ const cards = ref<Card[]>([
 ]);
 </script>
 <template>
-  <section class="section container" id="what-i-bring">
-    <h2 class="heading--l">What I bring to the team</h2>
-    <CardGrid :cards="cards" />
-  </section>
+  <div class="root">
+    <section class="section container" id="what-i-bring">
+      <h2 class="heading--l">What I bring to the team</h2>
+      <CardGrid :cards="cards" />
+    </section>
+  </div>
 </template>
 <style scoped>
+.root {
+  background-color: var(--c-primary-800);
+}
 #what-i-bring {
   padding-top: 8rem;
 }
